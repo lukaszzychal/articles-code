@@ -1,6 +1,6 @@
 # Medium Articles Code 🚀
 
-Welcome to the official repository containing all the practical code examples, configuration files, and manifests referenced in my [Medium articles](WSTAW_SWOJ_LINK_DO_MEDIUM).
+Welcome to the official repository containing all the practical code examples, configuration files, and manifests referenced in my [Medium articles](https://medium.com/@lukaszzychal)).
 
 My goal is to bridge the gap between high-level architecture concepts and hands-on engineering. If you are reading one of my posts, you will likely find the working code for it right here.
 
@@ -17,6 +17,7 @@ Feel free to clone this repository and test the files on your local machine to f
 
 ```bash
 git clone [[https://github.com/TWOJ_NICK/articles-code.git](https://github.com/lukaszzychal/articles-code.git)]([https://github.com/TWOJ_NICK/articles-code.git)](https://github.com/lukaszzychal/articles-code.git)
+```
 
 Navigate to the specific folder you are interested in and follow the instructions in the article.
 
