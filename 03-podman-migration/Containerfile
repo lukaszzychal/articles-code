@@ -2,7 +2,7 @@
 # Modern OCI standard - exactly the same syntax as a Dockerfile!
 FROM docker.io/library/nginx:alpine
 
-LABEL maintainer="Your Name <your.email@example.com>"
+LABEL maintainer="Lukasz Zychal <lukasz.zychal.dev@gmail.com>"
 LABEL description="Example image built from a Containerfile using Podman"
 
 COPY index.html /usr/share/nginx/html/index.html

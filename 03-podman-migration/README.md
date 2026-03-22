@@ -5,9 +5,9 @@ Podman uses the exact same syntax as Docker. You can use `Dockerfile` files, but
 To build an image from the attached `Containerfile`, simply type in your terminal:
 
 ```bash
-podman build -t my-test-nginx -f Containerfile .
+podman build --no-cache -t my-test-nginx -f Containerfile .
 
-podman build -t my-test-nginx -f Dockerfile .
+podman build --no-cache -t my-test-nginx -f Dockerfile .
 
 podman run -d -p 8080:80 localhost/my-test-nginx
 
