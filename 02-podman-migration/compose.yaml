@@ -1,0 +1,7 @@
+# 📄 docker-compose.yaml / compose.yaml
+services:
+  web:
+    image: nginx:alpine
+    container_name: nginx-container
+    ports:
+      - "8080:80"
