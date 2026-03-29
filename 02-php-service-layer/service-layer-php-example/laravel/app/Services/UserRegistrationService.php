@@ -12,6 +12,9 @@ use Exception;
 
 class UserRegistrationService
 {
+    /**
+     * Main service method handling the registration process.
+     */
     public function registerUser(array $data): User
     {
         DB::beginTransaction();
@@ -26,15 +29,17 @@ class UserRegistrationService
             $role = Role::where('name', 'user')->first();
             $user->roles()->attach($role);
 
-            Mail::to($user->email)->send(new WelcomeEmail($user));
-
             DB::commit();
             
-            return $user;
-
         } catch (Exception $e) {
             DB::rollBack();
-            throw $e; // Exception caught globally
+            // The service throws the exception higher up; it doesn't format the HTTP error!
+            throw $e; 
         }
+
+        // 4. Business logic - sending an email (CORRECT: Outside transaction)
+        Mail::to($user->email)->send(new WelcomeEmail($user));
+
+        return $user;
     }
 }
